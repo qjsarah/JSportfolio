@@ -1,0 +1,39 @@
+<div class="mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+    <div class="text-center">
+        <h1>{{title}}</h1>
+        <p class="fst-italic" id="skill">{{description}}</p>
+    </div>
+ <div class="px-5">
+    <section id="skills" class="container">
+      <h4 class="mb-3" data-aos="fade-right" data-aos-duration="1000">Technical Skills</h4>
+
+      <div class="row container">
+        <div class="col-md-6 mb-4" *ngFor="let skill of skills">
+          <div class="h-auto">
+            <div class="card-body row align-items-center">
+              <div class="col">
+                <div class="progress h-100 rounded-4" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated rounded-4 fw-bold shadow-sm bg-warning border border-2 p-2"
+                       role="progressbar"
+                       [style.width.%]="skill.percentage"
+                       [attr.aria-valuenow]="skill.percentage"
+                       aria-valuemin="0"
+                       aria-valuemax="100"
+                       data-aos="fade-right"
+                       data-aos-duration="2500">
+                    <div class="rounded d-flex align-items-center">
+                      <img [src]="skill.imgpath" class="card-img-top" [alt]="skill.name + ' logo'" style="width: 50px">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <p class="text-center mt-3" data-aos="fade-up" data-aos-duration="1000">I am always open to learn and develop new skills</p>
+</div>

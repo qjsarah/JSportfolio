@@ -1,0 +1,90 @@
+<div class="container mt-5 pt-5">
+    <div class="text-center">
+        <h1 data-aos="fade-up" data-aos-duration="1000">MY WORKS</h1>
+        <p class="fst-italic" data-aos="fade-up" data-aos-duration="1000">
+        Browse through everything I have created, from personal works, school works, to commissioned works.
+        </p>
+    </div>
+    
+    <!-- TOP WORKS -->
+    <h4 class="" data-aos="fade-right" data-aos-duration="1000">TOP WORKS</h4>
+    <div class="container mb-5" id="top-works-container" data-aos="zoom-in-up" data-aos-duration="1000">
+    <div *ngFor="let work of topWorks" class="top-work text-center">
+        <a [href]="work.link" target="_blank">
+        <h4>{{ work.title }}</h4>
+        <img [src]="work.imgpath" [alt]="work.title + ' image'" class="img-fluid w-75">
+        </a>
+    </div>
+    </div>
+
+
+    <!-- ALL WORKS FOLDERS -->
+    <div class="container mb-5" id="custom-vh">
+        <div class="d-flex flex-wrap justify-content-center overflow-hidden h-100 position-relative">
+        <div *ngFor="let work of allWorks" class="my-3 mx-4 text-center">
+            <div data-bs-toggle="modal" [attr.data-bs-target]="'#' + work.modalid">
+            <img [src]="work.imgpath" [alt]="work.title + ' folder'" class="mb-2 img-fluid">
+            <h5>{{ work.title }}</h5>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- WEB MODAL -->
+    <div class="modal fade" id="web-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Web Projects</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+            <div *ngFor="let work of webWorks" class="mb-4">
+                <img [src]="work.imgpath" [alt]="work.name" class="mb-2 img-fluid">
+                <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
+                <h5>{{ work.name }}</h5>
+                <a [href]="work.link" target="_blank" class="btn btn-outline-warning">Visit Project</a>
+                </div>
+                <p>{{ work.description }}</p>
+                <hr>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- GRAPHIC MODAL -->
+    <div class="modal fade" id="graphic-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Graphic Design Projects</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body d-flex flex-wrap gap-2 justify-content-center">
+            <div *ngFor="let work of graphicWorks" class="mb-4 img-grid text-center">
+                <img [src]="work.imgpath" [alt]="work.name" class="img-fluid mb-2">
+                <h5>{{ work.name }}</h5>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- ILLUSTRATION MODAL -->
+    <div class="modal fade" id="illustration-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Illustration Projects</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body d-flex flex-wrap gap-2 justify-content-center">
+            <div *ngFor="let work of illustrationWorks" class="mb-4 img-grid text-center">
+                <img [src]="work.imgpath" class="img-fluid mb-2">
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

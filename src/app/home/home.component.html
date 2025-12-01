@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-center align-items-center my-5 remove-flex flex-column flex-lg-row">
+  <div class="container">
+    <div class="m-auto d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000" id="testimonial-container">
+      <div *ngFor="let testimonial of testimonials" class="testimonial p-3 text-center border rounded shadow-sm" style="width: 300px;">
+        <p class="fst-italic testimonial-text"> {{ testimonial.text }} </p>
+        <h6 class="mt-2 testimonial-author">{{ testimonial.author }}</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" data-aos="fade-left" data-aos-duration="1000">
+    <h1 class="display-1 text-end" id="username">June Sarah Quiambao</h1>
+    <div class="d-flex justify-content-end gap-4 align-items-center roles">
+      <h4>WEB DEVELOPER</h4>
+      <h4>UI/UX DESIGNER</h4>
+    </div>
+    <div class="container text-end">
+      <p class="text-end" id="content">
+        I do programming—mostly front-end, graphic design, and digital illustration. I love the stars, and learning new things.
+      </p>
+      <a href="assets/pdf/QUIAMBAOJUNESARAH_CV.pdf" download class="text-decoration-none float-end">
+        <button class="btn btn-outline-warning d-flex justify-content-center align-items-center rounded-5 gap-1 p-3">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <p class="my-auto">Download Resume</p>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
