@@ -29,8 +29,6 @@ interface Star { // Define the Star interface
 export class AppComponent implements OnInit, AfterViewInit {
   themeIconHtml: string = '';
   ngOnInit() {
-    AOS.init(); // Initialize AOS library
-
     //initialize theme
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-bs-theme', savedTheme);
@@ -58,6 +56,12 @@ export class AppComponent implements OnInit, AfterViewInit {
   mouse = { x: 0, y: 0 };
 
   ngAfterViewInit() {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    setTimeout(() => AOS.refresh(), 200); // prevents delayed load on production
     this.canvas = document.getElementById('starCanvas') as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d');
 
