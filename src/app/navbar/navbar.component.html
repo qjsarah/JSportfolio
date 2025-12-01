@@ -1,8 +1,8 @@
 <div class="px-5 navbar-blur">
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-md">
     <a class="navbar-brand" href="#">
       <img src="assets/images/logo-mark-yellowbg.png"
-           class="img-fluid logo w-50 mx-auto d-block"
+           class="img-fluid mx-auto d-block" style="width:50px;"
            alt="logo">
     </a>
 
@@ -23,9 +23,23 @@
         <li class="nav-item"><a class="nav-link text-warning" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link text-warning" href="#contact">Contact</a></li>
       </ul>
+
+      <div class="d-flex container-sm justify-content-end align-items-center text-warning mobile mt-3">
+        <a href="https://github.com/qjsarah" class="nav-link mx-1">
+          <i class="fa-brands fa-github fa-lg"></i>
+        </a>
+        <a href="" class="nav-link">
+          <i class="fa-solid fa-envelope fa-lg"></i>
+        </a>
+
+        <button id="themeToggle" class="btn btn-outline-warning mx-2" (click)="toggleTheme()">
+          <span id="themeIcon" [innerHTML]="themeIconHtml"></span>
+        </button>
+
+      </div>
     </div>
 
-    <div class="d-flex container-sm justify-content-end align-items-center text-warning">
+    <div class="d-flex container-sm justify-content-end align-items-center text-warning desktop">
       <a href="https://github.com/qjsarah" class="nav-link mx-1">
         <i class="fa-brands fa-github fa-lg"></i>
       </a>

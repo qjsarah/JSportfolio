@@ -1,0 +1,14 @@
+.mobile {
+    display: none !important;
+}
+.desktop {
+    display: flex !important;
+}
+@media only screen and (max-width: 846px) {
+  .mobile {
+    display: flex !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+}

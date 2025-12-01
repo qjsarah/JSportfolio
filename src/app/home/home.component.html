@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center align-items-center my-5 remove-flex flex-column flex-lg-row">
-  <div class="container">
+  <div class="container desktop">
     <div class="m-auto d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000" id="testimonial-container">
       <div *ngFor="let testimonial of testimonials" class="testimonial p-3 text-center border rounded shadow-sm" style="width: 300px;">
         <p class="fst-italic testimonial-text"> {{ testimonial.text }} </p>
@@ -24,6 +24,15 @@
           <p class="my-auto">Download Resume</p>
         </button>
       </a>
+    </div>
+  </div>
+
+    <div class="container mobile mt-5">
+    <div class="m-auto d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000" id="testimonial-container">
+      <div *ngFor="let testimonial of testimonials" class="testimonial p-3 text-center border rounded shadow-sm" style="width: 300px;">
+        <p class="fst-italic testimonial-text"> {{ testimonial.text }} </p>
+        <h6 class="mt-2 testimonial-author">{{ testimonial.author }}</h6>
+      </div>
     </div>
   </div>
 </div>

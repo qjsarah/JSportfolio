@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, AfterViewInit  } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +7,19 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit, AfterViewInit{
   themeIconHtml: string = '';
+  ngAfterViewInit(): void {
+    const navbar = document.querySelector('.navbar-blur') as HTMLElement;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  }
   ngOnInit() {
       //initialize theme
     const savedTheme = localStorage.getItem('theme') || 'dark';

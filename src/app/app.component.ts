@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import {  ContactComponent } from './contact/contact.component';
 import * as AOS from 'aos';
 
 interface Star { // Define the Star interface
@@ -21,7 +22,7 @@ interface Star { // Define the Star interface
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HomeComponent, CommonModule, AboutComponent, SkillsComponent, ProjectsComponent],
+  imports: [RouterOutlet, NavbarComponent, HomeComponent, CommonModule, AboutComponent, SkillsComponent, ProjectsComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']  
 })

@@ -8,20 +8,21 @@
     
     <!-- TOP WORKS -->
     <h4 class="" data-aos="fade-right" data-aos-duration="1000">TOP WORKS</h4>
-    <div class="container mb-5" id="top-works-container" data-aos="zoom-in-up" data-aos-duration="1000">
-    <div *ngFor="let work of topWorks" class="top-work text-center">
-        <a [href]="work.link" target="_blank">
-        <h4>{{ work.title }}</h4>
-        <img [src]="work.imgpath" [alt]="work.title + ' image'" class="img-fluid w-75">
-        </a>
+    <div class="container mb-5" id="custom-vh">
+    <div class="m-auto d-flex flex-wrap justify-content-center overflow-hidden h-100 position-relative" id="top-work-container" data-aos="zoom-in-up" data-aos-duration="1000">
+        <div *ngFor="let work of topWorks" class="top-work text-center">
+            <a [href]="work.link" target="_blank" class="nav-link">
+            <h4>{{ work.title }}</h4>
+            <img [src]="work.imgpath" [alt]="work.title + ' image'" class="img-fluid w-75">
+            </a>
+        </div>
     </div>
     </div>
-
 
     <!-- ALL WORKS FOLDERS -->
-    <div class="container mb-5" id="custom-vh">
-        <div class="d-flex flex-wrap justify-content-center overflow-hidden h-100 position-relative">
-        <div *ngFor="let work of allWorks" class="my-3 mx-4 text-center">
+    <div class="container mb-5">
+        <div class="d-flex flex-wrap justify-content-center overflow-hidden position-relative">
+        <div *ngFor="let work of allWorks" class="my-3 mx-5 text-center">
             <div data-bs-toggle="modal" [attr.data-bs-target]="'#' + work.modalid">
             <img [src]="work.imgpath" [alt]="work.title + ' folder'" class="mb-2 img-fluid">
             <h5>{{ work.title }}</h5>
