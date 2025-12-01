@@ -8,12 +8,12 @@
     
     <!-- TOP WORKS -->
     <h4 class="" data-aos="fade-right" data-aos-duration="1000">TOP WORKS</h4>
-    <div class="container mb-5" id="custom-vh">
+    <div class="container mb-3" id="custom-vh">
     <div class="m-auto d-flex flex-wrap justify-content-center overflow-hidden h-100 position-relative" id="top-work-container" data-aos="zoom-in-up" data-aos-duration="1000">
         <div *ngFor="let work of topWorks" class="top-work text-center">
             <a [href]="work.link" target="_blank" class="nav-link">
             <h4>{{ work.title }}</h4>
-            <img [src]="work.imgpath" [alt]="work.title + ' image'" class="img-fluid w-75">
+            <img [src]="work.imgpath" [alt]="work.title + ' image'" class="img-fluid" style="width: 60%;">
             </a>
         </div>
     </div>
